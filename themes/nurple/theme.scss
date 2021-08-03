@@ -1,0 +1,289 @@
+﻿@import '../mixins/gradients.scss';
+@import './colors.scss';
+@import './widgets.scss';
+
+body {
+    font-family: Roboto;
+    background-image: url('background.jpg');
+}
+select, input[type=text], fieldset {
+    font-size: 1rem;
+    border-radius: $border_radius;
+}
+.popover,
+.control-panel {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: .4rem;
+    margin-right: .2rem;
+    padding: .4em;
+    border: $outline_border;
+    border-radius: $border_radius;
+    @include panel_background();
+    @include box_shadow(2px 2px 2px, rgba(27, 27, 27, 0.4), gainsboro);
+    color:white;
+}
+.ui-dialog-content {
+    @include panel_background();
+    color:white;
+}
+.ui-dialog-titlebar {
+    font-family: Roboto;
+    color: white;
+    font-weight:400;
+    @include panel_header_background();
+}
+.control-panel-title {
+    white-space: nowrap;
+    border-bottom: solid 1px gray;
+    margin-left: -.4rem;
+    margin-right: -.4rem;
+    margin-top: -.4rem;
+    padding-top: .4rem;
+    color: white;
+    padding-left: .4rem;
+    padding-right: .2rem;
+    padding-bottom: .2rem;
+    margin-bottom: .2rem;
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    @include panel_header_background();
+    @include box_shadow(0px 4px 5px, rgba(27, 27, 27, 0.4), gainsboro);
+}
+.status-text {
+
+}
+.body-text {
+    font-family:Arial;
+}
+.fld-value {
+    border: solid 1px #63727A;
+    border-radius: $border_radius;
+    background: white;
+    color: #63727A;
+}
+.fld-value-combo {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: solid 1px #63727A;
+    background: white;
+    color: #63727A;
+}
+.fld-value-center {
+    border-radius: 0px !important;
+    border: solid 1px #63727A !important;
+    background: white;
+    color: #63727A;
+}
+
+.btn-border {
+    white-space: nowrap;
+    border: solid 1px #63727A;
+    border-radius: $border_radius;
+    display: inline-block;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-right: .2rem;
+    padding-left: 0px;
+    margin: .1rem;
+    @include box_shadow(3px 3px 3px, rgba(127,127,127,0.5), gainsboro);
+}
+.btn {
+    white-space: nowrap;
+    border: solid 1px gray;
+    border-radius: $border_radius;
+    display: inline-block;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-right: .2rem;
+    padding-left: 0px;
+    margin: .1rem;
+    color:white;
+    @include button_background();
+    @include box_shadow(1px 1px 1px, rgba(127,127,127,0.5), gainsboro);
+}
+.btn-stateonly {
+    @include box_shadow(3px 3px 3px, rgba(127,127,127,0.5), gainsboro);
+    @include panel_background();
+}
+.btn-panel {
+    padding: .2rem;
+    margin-top: .2rem;
+    text-align: right;
+    border-top: solid 3px gainsboro;
+}
+.fld-btn-right {
+    color:white;
+    border-radius:$border_radius;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+    border: solid 1px gray;
+    @include fldbutton_background();
+}
+.fld-btn-left {
+    color: white;
+    border-radius: $border_radius;
+    border: solid 1px gray;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
+    @include fldbutton_background();
+}
+.btn-toggle:not([disabled]):not(.disabled):hover,
+.fld-btn-left:not([disabled]):not(.disabled):hover,
+.fld-btn-left:not([disabled]):not(.disabled).hover,
+.fld-btn-right:not([disabled]):not(.disabled):hover,
+.fld-btn-right:not([disabled]):not(.disabled).hover,
+.btn-border:not([disabled]):not(.disabled):hover,
+.btn-border:not([disabled]):not(.disabled).hover,
+.btn:not([disabled]):not(.disabled):hover,
+.btn:not([disabled]):not(.disabled).hover {
+    color: white;
+    @include hover_background();
+}
+.btn-toggle:not([disabled]):not(.disabled):active,
+.fld-btn-left:not([disabled]):not(.disabled):active,
+.fld-btn-left:not([disabled]):not(.disabled).active,
+.fld-btn-right:not([disabled]):not(.disabled):active,
+.fld-btn-right:not([disabled]):not(.disabled).active,
+.btn-border:not([disabled]):not(.disabled):active,
+.btn-border:not([disabled]):not(.disabled).active,
+.btn:not([disabled]):not(.disabled):active,
+.btn:not([disabled]):not(.disabled).active {
+    color: white;
+    @include active_background();
+    opacity: .5;
+}
+.tab-contents {
+    border: $outline_border;
+    border-bottom-right-radius: $border_radius;
+    border-bottom-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+}
+.tab-item {
+    border: $outline_border;
+    border-top-right-radius: $border_radius;
+    border-top-left-radius: $border_radius;
+    background-color: white;
+}
+.dropdown-panel {
+    background-color: white;
+    border: solid 1px white;
+    @include box_shadow(3px 3px 3px, rgba(127,127,127,0.5), gainsboro);
+    border-radius: $border_radius;
+}
+.header-background {
+    color:white;
+    @include header_background();
+}
+div.optBody {
+    @include panel_background;
+    border-width:1px;
+}
+table.optOuter {
+    border-radius: $border_radius;
+}
+
+tr.optHeader > td {
+    border-bottom: solid 2px black;
+    border-top-right-radius: $border_radius;
+    border-top-left-radius: $border_radius;
+}
+
+table.optBody > tbody > tr > td:last-child,
+table.optHeader > tbody > tr > td:last-child {
+    border: none;
+}
+table.optBody td,
+table.optHeader td {
+    border-right: solid 1px gray;
+}
+
+table.optBody > tbody > tr.selected {
+    @include selected_background();
+    color: white;
+}
+
+table.optBody > tbody > tr:hover {
+    @include hover_background();
+    color: white;
+}
+div.picIndicator {
+    display: inline-block;
+    border: solid 1px silver;
+    background:white;
+    vertical-align:text-top;
+    border-radius: 25%;
+}
+div.picIndicator[data-status=on],
+div.picIndicator[data-status=ready],
+div.picIndicator[data-status=selected],
+div.picIndicator[data-status=true] {
+    @include radial_gradient(center, ellipse, farthest-corner, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%);
+}
+div.picIndicator[data-status=pending], div.piscIndicator[data-status=timeout] {
+    @include radial_gradient(center, ellipse, farthest-corner, rgba(255,255,28,1) 0%, rgba(204,201,73,1) 85%, rgba(196,192,81,1) 100%);
+}
+
+div.picIndicator[data-status=loading] {
+    @include radial_gradient(center, ellipse, farthest-corner, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
+}
+
+div.picIndicator[data-status=error] {
+    @include radial_gradient(center, ellipse, farthest-corner, rgba(255,173,41,1) 0%, rgba(255,0,0,1) 100%);
+}
+.btn-toggle.fld-btn-left {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.btn-toggle.fld-btn-right {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.btn-toggle.fld-btn-center {
+    border: solid 1px gray;
+    @include fldbutton_background();
+}
+
+.btn-toggle[data-selected="true"] {
+    color: white;
+    @include active_background();
+}
+table.vlist-outer {
+    border:solid 1px white;
+}
+tr.msgRow:nth-child(2n+1) {
+    color: black;
+}
+tr.msgRow:nth-child(2n) > td {
+    border-color:white;
+}
+tr.msgRow.selected, tr.msgApiRow.selected {
+    color: white!important;
+    @include active_background();
+    border-color:white;
+}
+table.picPumpPrograms > tbody > tr:nth-child(1),
+table.picSchedDays > tbody > tr:nth-child(1) {
+    background-color: #701c7c !important;
+    background-image: none;
+}
+table.picPumpPrograms > tbody > tr:nth-child(1) > td,
+table.picSchedDays > tbody > tr:nth-child(1) > td {
+    border-top: solid 1px white;
+}
+table.picPumpPrograms > tbody > tr:nth-child(1) > td:nth-child(1),
+table.picSchedDays > tbody > tr:nth-child(1) > td:nth-child(1) {
+    border-left: solid 1px white;
+}
+table.picPumpPrograms > tbody > tr:nth-child(1) > td:last-child,
+table.picSchedDays > tbody > tr:nth-child(1) > td:last-child {
+    border-right: solid 1px white;
+}
+table.picPumpPrograms > tbody > tr:nth-child(2) > td,
+table.picSchedDays > tbody > tr:nth-child(2) > td {
+    border: solid 1px white;
+    background-color: black;
+}
+

@@ -1,0 +1,152 @@
+﻿@import "default.scss";
+@import "controller.scss";
+
+header.picHeader {
+}
+
+div.dashOuter {
+  /* width: calc(var(--number-of-columns)*377)px; */
+  display: grid;
+  justify-content: center;
+  box-sizing: border-box;
+  grid-auto-rows: auto;
+  grid-row-gap: 0px;
+  margin: auto;
+  max-width: 1240px;
+}
+
+div.dashContainer {
+  /*   display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(377px, 1fr));  */
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-flow: column wrap; */
+}
+div.dashContainer > div > div.control-panel {
+  width: 23.5rem;
+}
+
+div.dashOuter[data-panel="dashboard"] > div.configContainer {
+  display: none;
+}
+
+div.dashOuter[data-panel="configuration"] > div.dashContainer {
+  display: none;
+}
+
+div.picDashboard[data-hidethemes="true"] div.picCircuit[data-type="circuit"] i.picDropdownButton.fa-palette,
+div.picDashboard[data-hidethemes="true"]
+  div.picCircuit[data-type="circuit"]
+  div.picLight
+  i.picDropdownButton.fa-palette,
+div.picDashboard[data-hidethemes="true"] div.picCircuit[data-type="circuit"] div.picIBColor,
+div.picDashboard[data-hidethemes="true"] div.picCircuit[data-type="circuit"] div.picLight div.picIBColor {
+  display: none;
+}
+/*
+div.picDashboard[data-hidethemes=false] span.picIntelliBriteIcon {
+    display: none;
+}
+*/
+div.picDashboard span.picIntelliBriteIcon {
+  display: none;
+}
+.control-panel {
+  height: fit-content;
+  vertical-align: top;
+  display: inline-block;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.control-panel-title {
+  white-space: nowrap;
+}
+div.picBodyTemp > div:nth-child(2) {
+  font-size: 2.5em;
+  min-width: 2.25em;
+}
+.orderInstructions {
+  margin-top: -7px;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 745px) {
+  div.lgOrderInstructions {
+    display: block;
+  }
+  div.orderDiv {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  div.picController {
+    // width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  div.picController div.picModel {
+    min-width: 0px;
+    width: auto;
+  }
+  div.dashOuter {
+    justify-content: unset;
+  }
+  div.dashOuter:not([data-panel="configuration"]) div.dashContainer {
+    display: contents !important;
+    overflow-y: auto;
+  }
+
+  div.control-panel {
+    margin-right: 0px;
+  }
+
+  div.picBodyTemp .picTempText,
+  div.picBodyTemp .picTempUnits {
+    display: none;
+  }
+
+  div.picBodies,
+  div.picPumps,
+  div.picChemistry,
+  div.picSchedules,
+  div.picCircuits {
+    max-width: 100%;
+  }
+  div.control-panel {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  div.picController span.picModelData {
+    display: none;
+  }
+
+  div.picController div.picModel {
+    min-width: 0px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  div.dashOuter:not([data-panel="configuration"]) div.dashContainer {
+    display: contents !important;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  div.picBodies {
+    min-width: 100%;
+  }
+
+  div.picChlorinator > label.picChlorinatorName,
+  div.picChemController > label.picControllerName {
+    max-width: 25%;
+  }
+}

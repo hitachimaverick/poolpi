@@ -1,0 +1,16 @@
+div.picIBColor {
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+div.picFeature div.picIBColor {
+  width: calc(100% - 3.75rem);
+}
+
+div.picDashboard[data-hidethemes=false] div.picLight[data-haslighttheme=true] > label,
+div.picDashboard[data-hidethemes=false] div.picLight[data-haslighttheme=true] > i,
+div.picLightGroup > label,
+div.picLightGroup > i {
+  align-self: center;
+  margin-top: -10px;
+}/*# sourceMappingURL=intellibrite.css.map */

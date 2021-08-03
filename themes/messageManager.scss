@@ -1,0 +1,492 @@
+﻿@import 'default.scss';
+div.mmgrOuter {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    box-sizing: border-box;
+    grid-auto-rows: auto;
+    grid-row-gap: 0px;
+}
+
+    div.messageContainer {
+        display: inline-grid;
+        grid-template-columns: 800px 477px;
+    }
+
+
+@media screen and (max-width:1277px) {
+    div.messageContainer {
+        display: inline-grid;
+        grid-template-columns: 571px 477px;
+    }
+}
+@media screen and (max-width:1048px) {
+    div.messageContainer {
+        display: inline-grid;
+        grid-template-columns: 547px 477px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    div.messageContainer {
+        display: inline-grid;
+        grid-template-columns: 700px;
+    }
+}
+
+.header {
+    display:block;
+    opacity:1;
+    grid-area:header;
+    background-color:#ffd800;
+    border:solid 1px green;
+}
+span.picPercentData {
+    padding-left:2px;
+    padding-right:2px;
+}
+table.msgList-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    box-sizing: border-box;
+}
+table.msgList-container > tbody > tr > td {
+    padding:0px;
+}
+tr.msgList-body {
+    height:100%;
+}
+td.msgList-body {
+    height: 100%;
+    width:100%;
+    vertical-align:top;
+    overflow:hidden;
+}
+tr.msgRow > td:nth-child(1),
+tr.msgRow > td:nth-child(3),
+tr.msgRow > td:nth-child(4) {
+    text-align: center;
+}
+tr.msgRow > td:nth-child(n+5) > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    display: inline-block;
+}
+tr.msgRow > td:nth-child(5) > span,
+tr.msgRow > td:nth-child(6) > span,
+tr.msgRow > td:nth-child(7) > span {
+    max-width: 55px;
+}
+tr.msgRow > td:nth-child(8) {
+    text-align: center;
+}
+tr.msgRow > td:nth-child(8) > span {
+    max-width: 37px;
+}
+tr.msgRow > td:last-child > span {
+    max-width:427px;
+}
+tr.msgRow.changed > td:nth-child(4) > span.changed {
+    color: #6495ed
+}
+tr.msgRow > td:nth-child(4) > span.changed.new {
+    color: mediumvioletred;
+}
+
+tr.msgApiRow > td:nth-child(1),
+tr.msgApiRow > td:nth-child(3),
+tr.msgApiRow > td:nth-child(4) {
+    text-align: center;
+}
+
+tr.msgApiRow > td:nth-child(5) > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    display: inline-block;
+    width:214px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+tr.msgRow > td:nth-child(8) {
+    text-align: center;
+}
+
+tr.msgRow > td:nth-child(8) > span {
+    max-width: 37px;
+}
+
+tr.msgApiRow > td:last-child > span {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+    max-width: 427px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1277px) {
+    tr.msgRow > td:last-child > span {
+        width: 247px;
+    }
+}
+
+@media screen and (max-width:1048px) {
+    tr.msgRow > td:last-child > span {
+        width: 224px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    tr.msgRow > td:last-child > span {
+        width: 372px;
+    }
+}
+tr.msgRow:nth-child(2n+1) {
+    background-color: aliceblue;
+}
+div.mmgrButton {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+div.mmgrButton.selected {
+    color: deeppink;
+}
+div.queued-message.selected {
+    color: black;
+    background: -webkit-linear-gradient(-90deg, white 0%, #AEBF76 65%);
+    background: linear-gradient(180deg, white 0%, #AEBF76 65%);
+}
+div.mmgrButton:hover {
+    color: orange;
+    text-shadow: 3px 3px 16px #272634;
+}
+div.picMessages.changesOnly tr.msgRow.nochange {
+    display:none;
+}
+tr.msgApiRow.selected,
+tr.msgRow.selected {
+    color: black;
+    background: -webkit-linear-gradient(-90deg, white 0%, #AEBF76 65%);
+    background: linear-gradient(180deg, white 0%, #AEBF76 65%);
+}
+tr.msgApiRow:hover,
+tr.msgRow:hover {
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#FF159FCF, EndColorStr=#FF13647F);
+    background: -ms-linear-gradient(top, #159FCF, #13647F);
+    background: -moz-linear-gradient(top, #159FCF, #13647F);
+    background: -webkit-linear-gradient(top, #159FCF, #13647F);
+    background: linear-gradient(to bottom, #159FCF, #13647F);
+}
+tr.msgRow > td > span {
+    padding-left:2px;
+    padding-right:2px;
+}
+tr.msgRow.invalid {
+    background-color: tomato;
+    color: yellow;
+}
+tr.msgRow[data-msgdir=out] i.fa-arrow-circle-left {
+    color:deeppink;
+}
+tr.msgRow[data-msgdir=in] i.fa-arrow-circle-right {
+    color: gray;
+}
+span.msg-detail-byte {
+    color:salmon;
+    font-weight:bold;
+}
+i.msg-detail-fromto {
+    padding-left:3px;
+    padding-right:3px;
+}
+div.msg-detail-section {
+    display:inline-block;
+    vertical-align:top;
+}
+div.msg-detail-section.bytearrays {
+    padding-left: 10px;
+}
+span.msg-detail-bytearray {
+    display:inline-block;
+    white-space:nowrap;
+    max-width:167px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+span.msg-detail-bytearray::before {
+    content: "[";
+}
+span.msg-detail-bytearray::after {
+    content:"]";
+}
+div.msg-detail-section.bytearrays > div.dataline > label {
+    display: inline-block;
+    width: 57px;
+    font-weight: bold;
+}
+div.msg-detail-section.apiDetails > div.dataline > label,
+div.queue-detail-panel > div.dataline > label,
+div.msg-detail-section.details > div.dataline > label {
+    display:inline-block;
+    width: 70px;
+    font-weight:bold;
+}
+div.callbody-value-outer {
+    font-size:10pt;
+    padding-left:10px;
+}
+label.callbody-name {
+    color:mediumpurple;
+    padding-right:4px;
+}
+span.callbody-value {
+    color:blue;
+}
+span.callbody-value[data-type$=string] {
+    color:tomato;
+}
+span.callbody-value[data-type$=null] {
+    color:darkgray;
+    font-style:italic;
+}
+
+div.msg-invalid-banner {
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 4px;
+    text-align:center;
+    display:inline-block;
+    box-shadow: 3px 3px 3px rgba(127,127,127,0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(127, 127, 127, 0.5);
+    -moz-box-shadow: 3px 3px 3px rgba(127,127,127,0.5);
+    background-color:tomato;
+    color:yellow;
+}
+div.picMessageDetail:not(.invalid) div.msg-invalid-banner {
+    display: none;
+}
+
+div.dataline {
+    font-size:8pt;
+}
+
+table.msg-payload {
+    border-collapse: collapse;
+    border-spacing:0px;
+    font-size:8pt;
+}
+tr.msg-payload-header {
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#FF159FCF, EndColorStr=#FF13647F);
+    background: -ms-linear-gradient(top, #159FCF, #13647F);
+    background: -moz-linear-gradient(top, #159FCF, #13647F);
+    background: -webkit-linear-gradient(top, #159FCF, #13647F);
+    background: linear-gradient(top, #159FCF, #13647F);
+}
+td.payload-byte {
+    cursor:pointer;
+}
+td.payload-byte.payload-change {
+    color: yellow;
+    background-color:cornflowerblue;
+    cursor:pointer;
+}
+tr.msg-payload-header > td {
+    border: solid 1px white;
+    padding: 1px;
+    text-align: center;
+}
+tr.msg-payload-decimal > td, tr.msg-payload-ascii > td, tr.msg-payload-hex > td {
+    border:solid 1px gainsboro;
+    padding:0px;
+    text-align:center;
+    min-width:21px;
+    max-width:21px;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+div.msg-payload-bytediff {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 8pt;
+    box-shadow: 3px 3px 3px rgba(127,127,127,0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(127, 127, 127, 0.5);
+    -moz-box-shadow: 3px 3px 3px rgba(127,127,127,0.5);
+    color:black;
+    background-color:white;
+    border:solid 1px gray;
+    border-radius:5px;
+}
+table.msg-payload-bytediff {
+    border-radius:5px;
+    border-collapse:collapse;
+}
+tr.bytediff-header > td.bytediff-binary {
+    border-top-right-radius:5px;
+}
+tr.bytediff-header > td.bytediff-dec,
+tr.bytediff-header > td.bytediff-ascii,
+tr.bytediff-header > td.bytediff-hex {
+    width: 1.7rem;
+}
+
+tr.bytediff-header > td,
+tr.bytediff-curr > td,
+tr.bytediff-prev > td {
+    border: solid 1px gray;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+tr.msg-payload-header > td.selected,
+tr.bytediff-header > td {
+    background: #fde4be;
+    background: -webkit-linear-gradient(-90deg, #fde4be 0%, #E78F08 65%);
+    background: linear-gradient(180deg, #fde4be 0%, #E78F08 65%);
+    color:black;
+    font-weight:bold;
+}
+tr.bytediff-header > td.bytediff-name {
+    border: none;
+    background: none;
+    font-size:10pt;
+    font-weight:bold;
+    text-align:center;
+    color:darkorange;
+}
+
+table.queue-list-header {
+    box-sizing: border-box;
+    font-size: 8pt;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    table-layout: auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#FF159FCF, EndColorStr=#FF13647F);
+    background-image: -ms-linear-gradient(top, #159FCF, #13647F);
+    background-image: -moz-linear-gradient(top, #159FCF, #13647F);
+    background-image: -webkit-linear-gradient(top, #159FCF, #13647F);
+    background-image: linear-gradient(to bottom, #159FCF, #13647F);
+}
+table.queue-list-header > tbody > tr > td:nth-child(6),
+table.queue-list-header > tbody > tr > td:nth-child(1) {
+    width: 14px;
+}
+table.queue-list-header > tbody > tr > td:nth-child(2) {
+    width: 47px;
+}
+table.queue-list-header > tbody > tr > td:nth-child(3) {
+    text-align: center;
+    width: 57px;
+}
+table.queue-list-header > tbody > tr > td:nth-child(4) {
+    text-align: center;
+    width: 47px;
+}
+table.queue-list-header > tbody > tr > td:nth-child(5) {
+    text-align: center;
+}
+
+table.queue-list-header > tbody > tr > td:nth-child(6) {
+    width: 70px;
+    text-align: center;
+}
+div.queue-send-list {
+    max-height:300px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    width:100%;
+
+}
+div.queued-message {
+    width:100%;
+    font-size:8pt;
+    white-space:nowrap;
+    line-height:12px;
+}
+div.picSendMessageQueue.processing > div.picMessageListTitle > div.mmgrButton {
+    display:none;
+}
+div.picSendMessageQueue.processing div.picActionButton:not(.cancel-button) {
+    display: none;
+}
+div.picSendMessageQueue:not(.processing) div.picActionButton.cancel-button {
+    display: none;
+}
+div.cancelButton {
+    margin-right: 1.5rem;
+    text-align:center;
+}
+
+div.queued-message.sending {
+    background: -webkit-linear-gradient(-90deg, white 0%, #AEBF76 65%);
+    background: linear-gradient(180deg, white 0%, #AEBF76 65%);
+}
+div.queued-message.sent {
+    font-style:italic;
+    color:dimgray;
+}
+div.queued-message > div.mmgrButton {
+    vertical-align:middle;
+}
+div.queued-message-edit {
+    margin-right:2px;
+    margin-left:0px;
+}
+div.queued-message-remove {
+    margin-right: 0px;
+    margin-left: 2px;
+}
+div.queued-message > span {
+    display:inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left:2px;
+    padding-right:2px;
+    vertical-align:middle;
+}
+span.queued-message-action,
+span.queued-message-srcdest {
+    text-align: center;
+    width: 47px;
+}
+span.queued-message-delay {
+    text-align: center;
+    width: 20px;
+}
+span.queued-message-proto {
+    width:57px;
+}
+span.queued-message-payload {
+    width:242px;
+}
+div.edit-message-doc,
+div.edit-message-panel,
+div.edit-message-protocol,
+div.edit-message-payload {
+    font-size:10pt;
+}
+div.edit-message-doc textarea,
+div.edit-message-doc input[type=text],
+div.edit-message-panel input[type=text],
+div.edit-message-protocol input[type=text],
+div.edit-message-payload input[type=text] {
+    font-size: 10pt;
+}
+@import 'controller.scss';
+
+#orderOfElements {
+    display: none;
+  }

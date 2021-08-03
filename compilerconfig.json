@@ -1,0 +1,78 @@
+﻿[
+  {
+    "outputFile": "themes/dashboard.css",
+    "inputFile": "themes/dashboard.scss"
+  },
+  {
+    "outputFile": "themes/controller.css",
+    "inputFile": "themes/controller.scss"
+  },
+  {
+    "outputFile": "themes/configPage.css",
+    "inputFile": "themes/configPage.scss"
+  },
+  {
+    "outputFile": "themes/messageManager.css",
+    "inputFile": "themes/messageManager.scss"
+  },
+  {
+    "outputFile": "themes/vlist.css",
+    "inputFile": "themes/vlist.scss"
+  },
+  {
+    "outputFile": "themes/default/theme.css",
+    "inputFile": "themes/default/theme.scss"
+  },
+  {
+    "outputFile": "themes/sketchy/theme.css",
+    "inputFile": "themes/sketchy/theme.scss"
+  },
+  {
+    "outputFile": "themes/materia/theme.css",
+    "inputFile": "themes/materia/theme.scss"
+  },
+  {
+    "outputFile": "themes/purple/theme.css",
+    "inputFile": "themes/purple/theme.scss"
+  },
+  {
+    "outputFile": "themes/nurple/theme.css",
+    "inputFile": "themes/nurple/theme.scss"
+  },
+  {
+    "outputFile": "themes/bootstrap/theme.css",
+    "inputFile": "themes/bootstrap/theme.scss"
+  },
+  {
+    "outputFile": "themes/bootstrap/intellibrite.css",
+    "inputFile": "themes/bootstrap/intellibrite.scss"
+  },
+  {
+    "outputFile": "themes/bootstrap/widgets.css",
+    "inputFile": "themes/bootstrap/widgets.scss"
+  },
+  {
+    "outputFile": "themes/bootstrap/colors.css",
+    "inputFile": "themes/bootstrap/colors.scss"
+  },
+  {
+    "outputFile": "themes/default/widgets.css",
+    "inputFile": "themes/default/widgets.scss"
+  },
+  {
+    "outputFile": "themes/materia/colors.css",
+    "inputFile": "themes/materia/colors.scss"
+  },
+  {
+    "outputFile": "themes/mixins/gradients.css",
+    "inputFile": "themes/mixins/gradients.scss"
+  },
+  {
+    "outputFile": "themes/purple/colors.css",
+    "inputFile": "themes/purple/colors.scss"
+  },
+  {
+    "outputFile": "themes/purple/widgets.css",
+    "inputFile": "themes/purple/widgets.scss"
+  }
+]
